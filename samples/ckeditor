@@ -1,0 +1,28 @@
+$ composer require egeloen/ckeditor-bundle
+class AppKernel extends Kernel
+{
+    public function registerBundles()
+    {
+        $bundles = array(
+            new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
+            // ...
+        );
+
+        // ...
+    }
+}
+
+$ php bin/console ckeditor:install
+
+$ php bin/console assets:install web
+
+//config.yml
+ivory_ck_editor:
+    input_sync: true
+    default_config: base_config
+    configs:
+        base_config:
+            toolbar:
+                - { name: "styles", items: ['Bold', 'Italic', 'BulletedList', 'Link', 'Format'] }
+                - { name: "insert", items: ['Image'] }
+

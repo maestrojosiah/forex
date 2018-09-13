@@ -1,0 +1,14 @@
+variables
+max_immediate_children
+amount_to_be_sent
+
+
+functions
+
+get benefitiaries number // returns a phone number
+
+can_benefit
+
+change_level
+
+set level

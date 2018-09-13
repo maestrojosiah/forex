@@ -1,0 +1,10 @@
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+// ...
+
+$builder->add('isAttending', ChoiceType::class, array(
+    'choices'  => array(
+        'Maybe' => null,
+        'Yes' => true,
+        'No' => false,
+    ),
+));

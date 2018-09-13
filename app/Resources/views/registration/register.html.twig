@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+		{{ form_start(form) }}
+		{# {{dump(test)}} #}
+			  <div class="form-group">
+			    <label for="firstName" class="col-sm-2 control-label">First Name</label>
+			    <div class="col-sm-10">
+		    		{{ form_row(form.f_name, {'attr': {'class': 'form-control', 'placeholder': 'First Name', 'id': 'firstname' }}) }}
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="lastName" class="col-sm-2 control-label">Last Name</label>
+			    <div class="col-sm-10">
+		    		{{ form_row(form.l_name, {'attr': {'class': 'form-control', 'placeholder': 'Last Name', 'id': 'lastname' }}) }}
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="idNumber" class="col-sm-2 control-label">ID Number</label>
+			    <div class="col-sm-10">
+		    		{{ form_row(form.id_number, {'attr': {'class': 'form-control', 'placeholder': 'ID Number', 'id': 'idNumber', 'value': random() }}) }}
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="phoneNumber" class="col-sm-2 control-label">Phone Number</label>
+			    <div class="col-sm-10">
+		    		{{ form_row(form.phone, {'attr': {'class': 'form-control', 'placeholder': 'phone Number', 'id': 'phoneNumber', 'value': random() }}) }}
+			    </div>
+			  </div>
+			  {% if users_count > 0 %}
+			  <div class="form-group">
+			    <label for="referred" class="col-sm-2 control-label">Referred By:</label>
+			    <div class="col-sm-10">
+		    		{{ form_row(form.referrer, {'attr': {'class': 'form-control', 'placeholder': 'Referrers Code', 'id': 'referred' }}) }}
+			    </div>
+			  </div>
+			  {% endif %}
+			  <div class="form-group">
+			    <label for="username" class="col-sm-2 control-label">Username</label>
+			    <div class="col-sm-10">
+		    		{{ form_row(form.username, {'attr': {'class': 'form-control', 'placeholder': 'Username', 'id': 'username' }}) }}
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="email" class="col-sm-2 control-label">Email</label>
+			    <div class="col-sm-10">
+		    		{{ form_row(form.email, {'attr': {'class': 'form-control', 'placeholder': 'Email', 'id': 'email' }}) }}
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+			    <div class="col-sm-10">
+		    		{{ form_row(form.plainPassword.first, {'attr': {'class': 'form-control', 'id': 'password' }}) }}
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputPassword3" class="col-sm-2 control-label">Repeat Password</label>
+			    <div class="col-sm-10">
+		    		{{ form_row(form.plainPassword.second, {'attr': {'class': 'form-control', 'id': 'passwrdrepeat' }}) }}
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <button type="submit" class="btn btn-default">Sign Up</button>
+			    </div>
+			  </div>
+
+		{{ form_end(form) }}
+
+{% endblock %}

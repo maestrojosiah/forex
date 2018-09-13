@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block pagewrapper %}
+    {% embed "templates/pagewrapper.html.twig" %}
+        {% block charts %}
+        {% endblock %}
+    {% endembed %}
+{% endblock %}
